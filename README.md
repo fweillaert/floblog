@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Before the first launch, create and start the database
 ```bash
-bin/db
+devenv/start
 ```
 Then, run the development server:
 
