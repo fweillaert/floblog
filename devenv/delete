@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p "This will delete all you postgres and minio data, are you sure? (y/n) " -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  docker-compose -f ${__dir}/docker-compose.yml down -v
+fi
