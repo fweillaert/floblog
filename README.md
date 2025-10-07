@@ -9,10 +9,6 @@ bin/db
 Then, run the development server:
 
 ```bash
-npm run dev
-
-or 
-
 bun run dev
 ```
 
