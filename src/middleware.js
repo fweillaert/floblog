@@ -7,8 +7,12 @@ const loginRoutes = ["/admin/login"];
 
 export default async function middleware(req) {
   const path = req.nextUrl.pathname;
-  const isProtectedRoute = protectedRoutes.startWith(path);
+  const isProtectedRoute = protectedRoutes.includes(path);
   const isLoginRoute = loginRoutes.includes(path);
+
+  if (!isProtectedRoute) {
+    return NextResponse.next();
+  }
 
   const cookie = (await cookies()).get("session")?.value;
   const session = await decrypt(cookie);
