@@ -1,5 +1,5 @@
 import { login } from "@/app/actions/auth";
-import styles from "@/components/login/login.module.css";
+import styles from "@/components/Login/login.module.css";
 
 export default function Login() {
   return (
