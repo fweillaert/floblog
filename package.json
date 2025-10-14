@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --port 4040",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "biome check",
@@ -11,8 +11,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
+    "@next/env": "^15.5.4",
+    "bcrypt": "^6.0.0",
     "drizzle-orm": "^0.44.6",
+    "jose": "^6.1.0",
     "minio": "^8.0.6",
     "next": "15.5.4",
     "pg": "^8.16.3",
