@@ -10,7 +10,7 @@ export default async function middleware(req) {
   const isProtectedRoute = protectedRoutes.includes(path);
   const isLoginRoute = loginRoutes.includes(path);
 
-  if (!isProtectedRoute) {
+  if (!isProtectedRoute && !isLoginRoute) {
     return NextResponse.next();
   }
 
